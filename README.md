@@ -91,6 +91,8 @@ Purpose:
 - Can be connected to FluidSynth
 - Auto-recovers on reset or reconnect
 
+For practical use, only the compiled binary from `uno_midi_bridge_sp.c` is required.
+
 ---
 
 ## 5. Installation
