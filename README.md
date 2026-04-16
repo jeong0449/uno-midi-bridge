@@ -38,11 +38,13 @@ In that system, this Arduino UNO is referred to as:
 
 👉 https://github.com/jeong0449/NanoArdule/tree/main/firmware/ardule_usb_midi_host
 
-UNO-2 acts as:
+UNO-2 (a.k.a. Ardule USB MIDI Host) acts as:
 
 - MIDI input engine
 - USB/DIN MIDI bridge
 - reliable front-end for software synthesis
+
+UNO-2 functions as a subsystem within the Nano Ardule architecture, which is introduced just below.
 
 ---
 
