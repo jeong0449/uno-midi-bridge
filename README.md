@@ -120,12 +120,48 @@ gcc -O2 -Wall -o uno_midi_bridge_sp uno_midi_bridge_sp.c -lasound -lserialport
 ---
 
 ## 6. Usage
+### 6.1 Connect UNO-2 first
+
+Before running any program, make sure **UNO-2 is connected first**, with a MIDI keyboard attached.
+
+### 6.2 Verify the serial MIDI stream with Python
+
+Start with the raw dump tool to confirm that MIDI bytes are actually arriving from UNO-2:
 
 ```bash
 python3 uno_midi_serial_dump.py
+```
+
+When you play the keyboard, hexadecimal byte values starting with `0x` should appear on the screen.
+
+Example:
+
+```text
+0x90 0x3c 0x7f 0x80 0x3c 0x00
+```
+
+If no output appears, check:
+
+- USB connection
+- Serial device path (`/dev/serial/by-id/...`)
+- MIDI keyboard power/status
+
+### 6.3 Run the Python bridge
+
+```bash
 python3 uno_midi_bridge.py
+```
+
+Use this when you want a quick Python-based ALSA MIDI bridge for testing.
+
+### 6.4 Run the C bridge (recommended)
+
+```bash
 ./uno_midi_bridge_sp
 ```
+
+Use this for practical operation. The C version is more suitable for long-running sessions and real-time use.
+
 
 ---
 
