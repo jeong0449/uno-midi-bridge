@@ -2,7 +2,7 @@
 
 **Created:** 2026-04-17
 
-A minimal and robust bridge between Arduino MIDI hardware and Linux audio systems via ALSA.
+Bridge raw MIDI from Arduino UNO USB-serial to ALSA MIDI on Linux.
 
 ---
 
