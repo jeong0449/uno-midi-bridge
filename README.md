@@ -2,7 +2,8 @@
 
 **Created:** 2026-04-17
 
-Bridge raw MIDI from Arduino UNO USB-serial to ALSA MIDI on Linux.
+A lightweight MIDI bridge program running on Linux (Raspberry Pi),  
+converting raw USB-serial MIDI from Arduino UNO (UNO-2) into ALSA MIDI streams.
 
 ---
 
@@ -10,7 +11,7 @@ Bridge raw MIDI from Arduino UNO USB-serial to ALSA MIDI on Linux.
 
 This project provides a simple and practical way to:
 
-Receive raw MIDI bytes from an Arduino UNO (USB-serial)  
+Receive raw MIDI bytes from UNO-2 over USB serial
 and convert them into usable ALSA MIDI streams
 
 It includes:
@@ -32,17 +33,19 @@ This project originated as part of a broader system:
 - Raspberry Pi (synthesis engine, e.g., FluidSynth)
 - Arduino-based controllers and MIDI engines
 
-In that system, this Arduino UNO is referred to as:
+In the Fluid Ardule system, the Arduino UNO used here is referred to as:
 
 **UNO-2**
 
-[UNO-2](https://github.com/jeong0449/NanoArdule/tree/main/firmware/ardule_usb_midi_host) (a.k.a. Ardule USB MIDI Host) acts as:
+[UNO-2](https://github.com/jeong0449/NanoArdule/tree/main/firmware/ardule_usb_midi_host) (a.k.a. Ardule USB MIDI Host)
 
-- MIDI input engine
-- USB/DIN MIDI bridge
-- reliable front-end for software synthesis
+UNO-2 is a hardware subsystem that:
 
-UNO-2 functions as a subsystem within the Nano Ardule architecture, which is introduced just below.
+- handles MIDI input from USB and 5-pin DIN devices
+- routes MIDI signals between interfaces
+- forwards MIDI data over USB serial to the host system
+
+This project provides the corresponding **host-side bridge software**, which converts that serial MIDI data into ALSA MIDI streams.
 
 ---
 
@@ -71,7 +74,7 @@ DIN MIDI devices, and a Raspberry Pi-based synthesis system.
 ### `uno_midi_serial_dump.py`
 
 Purpose:
-- Verify that raw MIDI bytes are actually arriving from UNO-2 over USB-serial
+- Verify that raw MIDI bytes are arriving from UNO-2 over USB-serial
 
 ### `uno_midi_bridge.py`
 
@@ -190,4 +193,4 @@ The C bridge automatically recovers when:
 
 ## 10. Summary
 
-A minimal but powerful bridge connecting Arduino MIDI to Linux audio.
+A minimal but powerful host-side bridge that converts UNO-2 serial MIDI into ALSA MIDI on Linux.
