@@ -151,7 +151,11 @@ If no output appears, check:
 python3 uno_midi_bridge.py
 ```
 
-Use this when you want a quick Python-based ALSA MIDI bridge for testing.
+Use this for standalone operation or testing. The C version is more suitable for long-running sessions and real-time use.
+
+> [!NOTE]
+> In the Fluid Ardule environment, the main script (launch_fluidardule.py) automatically starts the bridge when needed.
+> Manual execution is not required during normal operation.
 
 ### 6.4 Run the C bridge (recommended)
 
