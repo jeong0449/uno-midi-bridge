@@ -27,7 +27,7 @@ This project originated as part of a broader system:
 
 ### Fluid Ardule
 
-Fluid Ardule is a DIY sound module system built around:
+[Fluid Ardule](https://github.com/jeong0449/FluidArdule) is a DIY sound module system built around:
 
 - Raspberry Pi (synthesis engine, e.g., FluidSynth)
 - Arduino-based controllers and MIDI engines
@@ -36,9 +36,7 @@ In that system, this Arduino UNO is referred to as:
 
 **UNO-2**
 
-👉 https://github.com/jeong0449/NanoArdule/tree/main/firmware/ardule_usb_midi_host
-
-UNO-2 (a.k.a. Ardule USB MIDI Host) acts as:
+[UNO-2](https://github.com/jeong0449/NanoArdule/tree/main/firmware/ardule_usb_midi_host) (a.k.a. Ardule USB MIDI Host) acts as:
 
 - MIDI input engine
 - USB/DIN MIDI bridge
@@ -50,9 +48,7 @@ UNO-2 functions as a subsystem within the Nano Ardule architecture, which is int
 
 ### Nano Ardule
 
-This project is also related to Nano Ardule:
-
-👉 https://github.com/jeong0449/NanoArdule
+This project is also related to [Nano Ardule](https://github.com/jeong0449/NanoArdule):
 
 - Arduino firmware for MIDI processing is implemented there
 - The UNO firmware used in this project originates from that ecosystem
